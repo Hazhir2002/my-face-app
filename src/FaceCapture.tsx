@@ -61,20 +61,20 @@ export default function FaceCapture() {
     });
 
   const handleContinue = () => {
-    if (window.Telegram?.WebApp) {
-      Promise.all(
-        captures.map((c) =>
-          c
-            .blob!.arrayBuffer()
-            .then((buf) => btoa(String.fromCharCode(...new Uint8Array(buf))))
-        )
-      ).then((encodedImages) => {
-        window.Telegram.WebApp.sendData(
-          JSON.stringify({ images: encodedImages })
-        );
-        window.Telegram.WebApp.close();
-      });
-    }
+    // if (window.Telegram?.WebApp) {
+    //   Promise.all(
+    //     captures.map((c) =>
+    //       c
+    //         .blob!.arrayBuffer()
+    //         .then((buf) => btoa(String.fromCharCode(...new Uint8Array(buf))))
+    //     )
+    //   ).then((encodedImages) => {
+    //     window.Telegram.WebApp.sendData(
+    //       JSON.stringify({ images: encodedImages })
+    //     );
+    //     window.Telegram.WebApp.close();
+    //   });
+    // }
 
     navigate("/results", { state: { captures } });
   };
