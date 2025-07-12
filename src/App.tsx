@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { loadFaceModels } from "./face-models";
 import FaceCapture from "./FaceCapture";

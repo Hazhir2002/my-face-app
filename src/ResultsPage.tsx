@@ -1,5 +1,3 @@
-// src/ResultsPage.tsx
-import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 type Capture = {
@@ -12,7 +10,6 @@ export default function ResultsPage() {
   const captures: Capture[] = (state as any)?.captures;
   const navigate = useNavigate();
 
-  // If someone lands here directly, send them back to home
   if (!captures) {
     navigate("/", { replace: true });
     return null;

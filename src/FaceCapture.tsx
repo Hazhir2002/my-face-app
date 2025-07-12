@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import * as faceapi from "face-api.js";
 import { useNavigate } from "react-router-dom";
 
